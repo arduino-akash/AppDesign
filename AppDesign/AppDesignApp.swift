@@ -10,8 +10,11 @@ import SwiftUI
 @main
 struct AppDesignApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+            WindowGroup {
+                ContentView()
+                .onOpenURL { url in
+                  print("URL: \(url)")
+                }
+            }
         }
-    }
 }
