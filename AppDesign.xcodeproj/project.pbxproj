@@ -20,6 +20,7 @@
 		AAB2EC4A2917C1AF0084695B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB2EC492917C1AF0084695B /* DetailView.swift */; };
 		AAB2EC4C2917C1F80084695B /* SocialCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB2EC4B2917C1F80084695B /* SocialCountView.swift */; };
 		AAB2EC4E2917C26B0084695B /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB2EC4D2917C26B0084695B /* CommentsView.swift */; };
+		AAB2EC522918C6E70084695B /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB2EC512918C6E70084695B /* ImageSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AAB2EC4B2917C1F80084695B /* SocialCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCountView.swift; sourceTree = "<group>"; };
 		AAB2EC4D2917C26B0084695B /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		AAB2EC502917C4170084695B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AAB2EC512918C6E70084695B /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				AAB2EC2D2917BFD50084695B /* ContentView.swift */,
 				AAB2EC2F2917BFD70084695B /* Assets.xcassets */,
 				AAB2EC312917BFD70084695B /* Preview Content */,
+				AAB2EC512918C6E70084695B /* ImageSlider.swift */,
 			);
 			path = AppDesign;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				AAB2EC3D2917C01E0084695B /* News.swift in Sources */,
 				AAB2EC4C2917C1F80084695B /* SocialCountView.swift in Sources */,
+				AAB2EC522918C6E70084695B /* ImageSlider.swift in Sources */,
 				AAB2EC4A2917C1AF0084695B /* DetailView.swift in Sources */,
 				AAB2EC2E2917BFD50084695B /* ContentView.swift in Sources */,
 				AAB2EC452917C0ED0084695B /* NewsList.swift in Sources */,

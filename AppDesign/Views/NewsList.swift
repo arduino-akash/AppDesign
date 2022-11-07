@@ -13,40 +13,27 @@ struct NewsList: View {
     var body: some View {
         NavigationView {
             List {
+                
+                Section(header: HeaderView(text: "WElCOME TO R WORLD")) {
+                    
+                ImageSlider()
+                        .frame(width: 320, height: 600, alignment: .center)
+                
+            }
                 Section(header: HeaderView(text: "Social Media")) {
                     ForEach(0..<1, id: \.self) { _ in
                         Link(destination: URL(string: "twitter://timeline")!){
                             VStack{
                                 Image("twitter")
-                                
                                     .resizable()
-                                    .aspectRatio(contentMode: .fill)
+                                    .aspectRatio(contentMode: .fit)
                                     .cornerRadius(10)
-                                
+                                    .padding()
                                 Text("Welcome to Twitter by Elon Musk")
-                                
-                                
-                                
                             }
                         }
                     }
-                    ForEach(0..<1, id: \.self) { _ in
-                        Link(destination: URL(string: "phonepe://")!){
-                            VStack{
-                                Image("phonepe")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .cornerRadius(10)
-                                
-                                Text("Pay your Credit Card Bills online")
-                                
-                            }
-                        }
-                    }
-                    
-                }
                 
-                Section(header: HeaderView(text: "Go Anywhere")) {
                     ForEach(0..<1, id: \.self) { _ in
                         Link(destination: URL(string: "phonepe://")!){
                             VStack{
@@ -56,6 +43,7 @@ struct NewsList: View {
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
                                             .cornerRadius(10)
+                                            .padding()
                                     }
                                     
                                     Link(destination: URL(string: "ms-word://")!){
@@ -63,14 +51,15 @@ struct NewsList: View {
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
                                             .cornerRadius(10)
+                                            .padding()
                                     }
-                                    //
                                     
                                     Link(destination: URL(string: "https://www.google.com/")!){
                                         Image("google")
                                             .resizable()
-                                            .aspectRatio(contentMode: .fill)
+                                            .aspectRatio(contentMode: .fit)
                                             .cornerRadius(10)
+                                            .padding()
                                     }
                                     
                                 }
@@ -78,8 +67,8 @@ struct NewsList: View {
                             }
                         }
                     }
-                    
                 }
+                
                 Section(header: HeaderView(text: "Latest")) {
                     ForEach (newsList) { row in
                         NavigationLink(destination: DetailView(news: row)) {
@@ -88,6 +77,7 @@ struct NewsList: View {
                     }
                 }
             }
+            
             .navigationBarTitle("Home")
         }
         // prevent iPad split view
