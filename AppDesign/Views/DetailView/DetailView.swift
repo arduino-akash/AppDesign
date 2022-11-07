@@ -29,6 +29,7 @@ struct DetailView: View {
                     SocialCountView().padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
                     Text(news.description)
                         .font(.subheadline)
+                        .multilineTextAlignment(.leading)
                 })
                 .padding(24)
             })

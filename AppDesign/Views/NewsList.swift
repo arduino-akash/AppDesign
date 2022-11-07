@@ -13,15 +13,69 @@ struct NewsList: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: HeaderView(text: "Advertisement")) {
+                Section(header: HeaderView(text: "Social Media")) {
                     ForEach(0..<1, id: \.self) { _ in
                         Link(destination: URL(string: "twitter://timeline")!){
                             VStack{
                                 Image("twitter")
-                                Spacer()
+                                
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .cornerRadius(10)
+                                
                                 Text("Welcome to Twitter by Elon Musk")
                                 
-                            }.frame(width: 300, height: 290, alignment: .center)
+                                
+                                
+                            }
+                        }
+                    }
+                    ForEach(0..<1, id: \.self) { _ in
+                        Link(destination: URL(string: "phonepe://")!){
+                            VStack{
+                                Image("phonepe")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .cornerRadius(10)
+                                
+                                Text("Pay your Credit Card Bills online")
+                                
+                            }
+                        }
+                    }
+                    
+                }
+                
+                Section(header: HeaderView(text: "Go Anywhere")) {
+                    ForEach(0..<1, id: \.self) { _ in
+                        Link(destination: URL(string: "phonepe://")!){
+                            VStack{
+                                HStack{
+                                    Link(destination: URL(string: "weather://")!){
+                                        Image("weather")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .cornerRadius(10)
+                                    }
+                                    
+                                    Link(destination: URL(string: "ms-word://")!){
+                                        Image("word")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .cornerRadius(10)
+                                    }
+                                    //
+                                    
+                                    Link(destination: URL(string: "https://www.google.com/")!){
+                                        Image("google")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .cornerRadius(10)
+                                    }
+                                    
+                                }
+                                
+                            }
                         }
                     }
                     
