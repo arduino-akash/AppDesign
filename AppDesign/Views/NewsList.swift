@@ -13,12 +13,15 @@ struct NewsList: View {
     var body: some View {
         NavigationView {
             List {
-                
-                Section(header: HeaderView(text: "WElCOME TO R WORLD")) {
-                    
+                Section() {
+                    VStack(alignment: .center, spacing: 5){
+                    Text("Welcome to the world of Rakuten")
+                            .font(.system(size: 16, design: .rounded))
+                            .fontWeight(.semibold)
+                            .padding()
                 ImageSlider()
                         .frame(width: 320, height: 600, alignment: .center)
-                
+                    }
             }
                 Section(header: HeaderView(text: "Social Media")) {
                     ForEach(0..<1, id: \.self) { _ in
