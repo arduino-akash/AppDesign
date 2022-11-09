@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ImageSlider: View {
     
+    // 1
     private let images = ["1", "2", "3", "4"]
     
     var body: some View {
@@ -18,11 +19,8 @@ struct ImageSlider: View {
                  //3
                  Image(item)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+//                    .scaledToFill()
                     .cornerRadius(10)
-                    .padding()
-
-                
             }
         }
         .tabViewStyle(PageTabViewStyle())
@@ -33,6 +31,6 @@ struct ImageSlider_Previews: PreviewProvider {
     static var previews: some View {
         // 4
         ImageSlider()
-            .previewLayout(.fixed(width: 200, height: 200))
+            .previewLayout(.fixed(width: 400, height: 300))
     }
 }

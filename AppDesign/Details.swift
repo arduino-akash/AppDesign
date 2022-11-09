@@ -1,13 +1,13 @@
 //
-//  DetailView.swift
+//  Details.swift
 //  AppDesign
 //
-//  Created by Singh, Akash | RIEPL on 06/11/22.
+//  Created by Singh, Akash | RIEPL on 09/11/22.
 //
 
 import SwiftUI
 
-struct DetailView: View {
+struct Details: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @GestureState private var dragOffset = CGSize.zero
     
@@ -18,14 +18,13 @@ struct DetailView: View {
             ScrollView(.vertical, showsIndicators: false, content: {
                 Image(news.imageName)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: geo.size.width, height: geo.size.width)
-                    .clipped()
+                    .padding()
                 
                 VStack(alignment: .leading, spacing: 8.0, content: {
                     Text(news.title).font(.largeTitle).lineLimit(4)
-                    SocialCountView().padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
-
+                    
                 })
                 .padding(24)
             })
@@ -54,7 +53,7 @@ struct DetailView: View {
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
+struct Details_Previews: PreviewProvider {
     static var previews: some View {
         let news = NewsStore.shared.getAll().first!
         DetailView(news: news)

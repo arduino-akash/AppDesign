@@ -9,20 +9,18 @@ import SwiftUI
 
 struct NewsList: View {
     
+
+    
     let newsList = NewsStore.shared.getAll()
     var body: some View {
         NavigationView {
-            List {
+            ScrollView {
                 Section() {
                     VStack(alignment: .center, spacing: 5){
-                    Text("Welcome to the world of Rakuten")
-                            .font(.system(size: 16, design: .rounded))
-                            .fontWeight(.semibold)
-                            .padding()
-                ImageSlider()
-                        .frame(width: 320, height: 600, alignment: .center)
+                        ImageSlider()
+                            .frame(width: 320, height: 600, alignment: .center)
                     }
-            }
+                }
                 Section(header: HeaderView(text: "Social Media")) {
                     ForEach(0..<1, id: \.self) { _ in
                         Link(destination: URL(string: "twitter://timeline")!){
@@ -36,7 +34,7 @@ struct NewsList: View {
                             }
                         }
                     }
-                
+                    
                     ForEach(0..<1, id: \.self) { _ in
                         Link(destination: URL(string: "phonepe://")!){
                             VStack{
@@ -100,10 +98,6 @@ struct NewsRowView: View {
             
             VStack(alignment: .leading, spacing: 4.0, content: {
                 Text(news.title).font(.headline).lineLimit(2)
-                Text(news.description).lineLimit(2).font(.subheadline)
-                Text(news.dateString)
-                    .foregroundColor(.gray)
-                    .font(.caption)
             })
         }
         .padding(8.0)
@@ -121,10 +115,7 @@ struct NewsHeadlineView: View {
             
             VStack(alignment: .leading, spacing: 8.0, content: {
                 Text(news.title).font(.title).lineLimit(2)
-                Text(news.dateString)
-                    .foregroundColor(.gray)
-                    .font(.subheadline)
-                Text(news.description).lineLimit(3).font(.subheadline)
+
             })
         }
         .padding(8.0)
